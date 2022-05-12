@@ -1,0 +1,8 @@
+SQLAlchemy~=1.4.36
+fastapi~=0.76.0
+starlette~=0.18.0
+uvicorn~=0.17.6
+fastapi-chameleon~=0.1.12
+python-multipart~=0.0.5
+pydantic==1.9.0
+Chameleon==3.10.0

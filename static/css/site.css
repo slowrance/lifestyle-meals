@@ -1,0 +1,191 @@
+body {
+    color: #222;
+    margin: 0px;
+    padding: 0px;
+    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    background-color: #006dad;
+}
+
+.main_content {
+    background: #fff;
+    margin: 0px;
+    padding: 0px 0px 50px;
+}
+
+
+.hero {
+    background-color: #0073b7;
+    color: white;
+    font-size: 18px;
+
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.hero a {
+    color: white;
+    text-decoration: underline;
+}
+
+.hero-inner {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.target {
+    flex: 1 100px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 20px;
+    background: #02377c;
+    margin: 20px;
+
+}
+
+.daily-meals {
+    flex: 1;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 20px;
+    background: #accffe;
+    margin: 20px;
+    min-width: 50%;
+
+}
+
+/*form.macros-form > * {*/
+/*    margin-top: 5px;*/
+/*    margin-bottom: 5px;*/
+/*}*/
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #c9c9c9;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.targets {
+    color: #ebebeb;
+    background-color: #0073b7;
+    padding: 50px 0px;
+}
+
+.targets > h2 {
+
+    color: white;
+    font-size: 2em;
+
+
+    text-align: center;
+}
+
+.btn-generate{
+    flex-basis: 100%;
+    align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.daily-meals {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+
+}
+
+.meal {
+    grid-column: 1
+}
+.meal-carbs {
+    grid-column: 2;
+}
+
+.meal-proteins {
+    grid-column: 3;
+}
+
+.meal-fats {
+    grid-column: 4;
+}
+
+.meal-calories {
+    grid-column: 5;
+}
+
+.breakfast {
+    grid-row: 2;
+}
+
+.lunch {
+    grid-row: 3;
+}
+
+.dinner {
+    grid-row: 4;
+}
+
+.meal-total {
+    grid-row: 5;
+}
+
+.meal-remaining {
+    grid-row: 6;
+}
+
+.meal.meal-total, .meal.meal-remaining {
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+.meal-total {
+    grid-row: 6;
+}
+
+.meal-remaining {
+    grid-row: 7;
+}
+
+.pypi-stats {
+    padding: 10px 0;
+    background-color: #ececec;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
+    margin-bottom: 30px;
+}
+
+
+
+footer {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: #2495f2;
+}
+
+.error-msg {
+    color: #b30000;
+}
+
+.page-core {
+    padding: 20px;
+}
