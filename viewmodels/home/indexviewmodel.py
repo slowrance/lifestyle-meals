@@ -16,6 +16,7 @@ class IndexViewModel(ViewModelBase):
         self.target_fats: Optional[int] = None
         self.daily_meals = None
         self.random_meal = None
+        self.valid_combo_count = None
 
     async def load(self):
         form = await self.request.form()

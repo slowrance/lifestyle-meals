@@ -26,7 +26,10 @@ async def index(request: Request):
     combos = get_combos('Large')
     valid_combos = get_valid_combos(combos, vm.target_carbs, vm.target_proteins, vm.target_fats)
     random_meal = random.choice(valid_combos)
-    vm.daily_meals = valid_combos
+    if len(valid_combos < 6):
+        vm.daily_meals = valid_combos
+    else:
+        vm.daily_meals = random.sample(valid_combos, 6)
     vm.random_meal = random_meal
     vm.valid_combo_count = len(valid_combos)
     return vm.to_dict()

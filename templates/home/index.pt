@@ -47,6 +47,7 @@
 <!--?                            <div class="meal">Breakfast: ${random_meal['breakfast'].name} - Lunch: ${random_meal['lunch'].name} -->
 <!--?                                Dinner: ${random_meal['dinner'].name}</div>-->
 <!--?                        </div>-->
+                        <div tal:condition="valid_combo_count">There are ${valid_combo_count} total meal combinations that meet those macro requirements</div>
                         <br>
                         <hr>
                         <br>
