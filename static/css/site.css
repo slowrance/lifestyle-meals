@@ -70,12 +70,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #c9c9c9;
     padding: 10px;
     border: 1px solid gray;
     border-radius: 5px;
+    max-width: 950px;
 }
 
 .targets {
@@ -176,6 +177,11 @@ body {
     font-size: large;
 }
 
+.stat-container {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .stats {
     background-color: #c9c9c9;
     padding: 10px;
@@ -183,12 +189,13 @@ body {
     border-radius: 5px;
     font-weight: bolder;
     font-size: x-large;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+    max-width: 70%;
 }
 
 
