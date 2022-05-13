@@ -1,7 +1,7 @@
 import os
 import sys
-import csv
-
+import json
+from typing import List
 
 sys.path.insert(0, os.path.abspath(os.path.join(
     os.path.dirname(__file__), "..")))
@@ -18,49 +18,59 @@ def main():
     meal_count = session.query(Meal).count()
     session.close()
     if meal_count == 0:
-        file_data = do_load_file()
-        do_meal_import(file_data)
-        do_allergy_import()
-        do_dislike_import()
+        data = do_load_json_file()
+        do_meal_import(data)
     do_summary()
 
-def do_load_file():
-    filename = 'meals2.csv'
-    with open(filename, mode='r') as f:
-        meals = list(csv.DictReader(f))
-    return meals
+def do_load_json_file():
+    filename = 'meals.json'
+    try:
+        with open(filename, 'r', encoding='utf-8') as fin:
+            data = json.load(fin)
+    except Exception as x:
+        print("ERROR in file: {}, details: {}".format(filename, x), flush=True)
+        raise
 
-def do_meal_import(meals: list):
-    session = db_session.create_session()
-    for line in meals:
-        meal = Meal()
-        meal.size = line['size']
-        meal.name = line['name']
-        meal.type = line['type']
-        meal.carbs = line['carbs']
-        meal.proteins = line['proteins']
-        meal.fats = line['fats']
+    return data
 
-        session.add(meal)
-    session.commit()
+def do_meal_import(data):
+    for meal in data['meals']:
+        m = Meal()
+        m.id = meal['id']
+        m.name = meal['name']
+        m.size = meal['size']
+        m.type = meal['type']
+        m.carbs = meal['carbs']
+        m.proteins = meal['proteins']
+        m.fats = meal['fats']
+        allergies = build_allergies(m.id, meal['allergies'])
+        dislikes = build_dislikes(m.id, meal['dislikes'])
 
-def do_allergy_import():
-    allergies = []
-    session = db_session.create_session()
-    for item in allergies:
-        allergy = Allergy()
-        allergy.name = item
-        session.add(allergy)
-    session.commit()
+        session = db_session.create_session()
+        session.add(m)
+        session.add_all(allergies)
+        session.add_all(dislikes)
+        session.commit()
+        session.close()
 
-def do_dislike_import():
-    dislikes = []
-    session = db_session.create_session()
-    for item in dislikes:
-        dislike = Dislike()
-        dislike.name = item
-        session.add(dislike)
-    session.commit()
+def build_allergies(meal_id: int, allergies: List[str]) -> List[Allergy]:
+    db_allergies = []
+    for allergy in allergies:
+        a = Allergy()
+        a.name = allergy
+        a.meal_id = meal_id
+        db_allergies.append(a)
+    return db_allergies
+
+def build_dislikes(meal_id: int, dislikes: List[str]) -> List[Dislike]:
+    db_dislikes = []
+    for dislike in dislikes:
+        d = Dislike()
+        d.name = dislike
+        d.meal_id = meal_id
+        db_dislikes.append(d)
+    return db_dislikes
+
 
 def do_summary():
     session = db_session.create_session()
