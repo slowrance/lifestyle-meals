@@ -8,6 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(
 
 import data.db_session as db_session
 from data.meal import Meal
+from data.allergy import Allergy
+from data.dislike import Dislike
 
 
 def main():
@@ -18,6 +20,8 @@ def main():
     if meal_count == 0:
         file_data = do_load_file()
         do_meal_import(file_data)
+        do_allergy_import()
+        do_dislike_import()
     do_summary()
 
 def do_load_file():
@@ -40,6 +44,23 @@ def do_meal_import(meals: list):
         session.add(meal)
     session.commit()
 
+def do_allergy_import():
+    allergies = []
+    session = db_session.create_session()
+    for item in allergies:
+        allergy = Allergy()
+        allergy.name = item
+        session.add(allergy)
+    session.commit()
+
+def do_dislike_import():
+    dislikes = []
+    session = db_session.create_session()
+    for item in dislikes:
+        dislike = Dislike()
+        dislike.name = item
+        session.add(dislike)
+    session.commit()
 
 def do_summary():
     session = db_session.create_session()

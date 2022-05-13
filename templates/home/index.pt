@@ -37,68 +37,52 @@
             </div>
 
 
+            <div tal:condition="valid_combo_count">
+                <div class="stats">There are ${valid_combo_count} total meal combinations that meet those macro requirements</div>
+            </div>
 
 
-<!--?            <div class="container project-list">-->
-<!--?                <div class="row">-->
-<!--?                    <div class="col-md-3"></div>-->
-<!--?                    <div class="col-md-6">-->
-<!--?                        <div tal:condition="random_meal">-->
-<!--?                            <div class="meal">Breakfast: ${random_meal['breakfast'].name} - Lunch: ${random_meal['lunch'].name} -->
-<!--?                                Dinner: ${random_meal['dinner'].name}</div>-->
-<!--?                        </div>-->
-                        <div tal:condition="valid_combo_count">There are ${valid_combo_count} total meal combinations that meet those macro requirements</div>
-                        <br>
-                        <hr>
-                        <br>
+            <div class="flex-container">
+                <div class="daily-meals" tal:repeat="dm daily_meals" tal:condition="daily_meals">
+                    <div class="meal-label meal-carbs label">Carbs</div>
+                    <div class="meal-label meal-proteins label">Proteins</div>
+                    <div class="meal-label meal-fats label">Fats</div>
+                    <div class="meal-label meal-calories label">Calories</div>
 
-                        <div class="flex-container">
-                            <div class="daily-meals" tal:repeat="dm daily_meals" tal:condition="daily_meals">
-                                <div class="meal-label meal-carbs">Carbs</div>
-                                <div class="meal-label meal-proteins">Proteins</div>
-                                <div class="meal-label meal-fats">Fats</div>
-                                <div class="meal-label meal-calories">Calories</div>
+                    <div class="meal breakfast"><span class="label">Breakfast: </span>${dm['breakfast'].name}</div>
+                    <div class="meal lunch"><span class="label">Lunch: </span>${dm['lunch'].name}</div>
+                    <div class="meal dinner"><span class="label">Dinner: </span>${dm['dinner'].name}</div>
+                    <div class="meal meal-total"><span class="label">Total: </span></div>
+                    <div class="meal meal-remaining"><span class="label">Remaining: </span></div>
 
-                                <div class="meal breakfast">Breakfast: ${dm['breakfast'].name}</div>
-                                <div class="meal lunch">Lunch: ${dm['lunch'].name}</div>
-                                <div class="meal dinner">Dinner: ${dm['dinner'].name}</div>
-                                <div class="meal meal-total">Total:</div>
-                                <div class="meal meal-remaining">Remaining:</div>
+                    <div class="meal-carbs breakfast">${dm['breakfast'].carbs}</div>
+                    <div class="meal-carbs lunch">${dm['lunch'].carbs}</div>
+                    <div class="meal-carbs dinner">${dm['dinner'].carbs}</div>
 
-                                <div class="meal-carbs breakfast">${dm['breakfast'].carbs}</div>
-                                <div class="meal-carbs lunch">${dm['lunch'].carbs}</div>
-                                <div class="meal-carbs dinner">${dm['dinner'].carbs}</div>
+                    <div class="meal-proteins breakfast">${dm['breakfast'].proteins}</div>
+                    <div class="meal-proteins lunch">${dm['lunch'].proteins}</div>
+                    <div class="meal-proteins dinner">${dm['dinner'].proteins}</div>
 
-                                <div class="meal-proteins breakfast">${dm['breakfast'].proteins}</div>
-                                <div class="meal-proteins lunch">${dm['lunch'].proteins}</div>
-                                <div class="meal-proteins dinner">${dm['dinner'].proteins}</div>
+                    <div class="meal-fats breakfast">${dm['breakfast'].fats}</div>
+                    <div class="meal-fats lunch">${dm['lunch'].fats}</div>
+                    <div class="meal-fats dinner">${dm['dinner'].fats}</div>
 
-                                <div class="meal-fats breakfast">${dm['breakfast'].fats}</div>
-                                <div class="meal-fats lunch">${dm['lunch'].fats}</div>
-                                <div class="meal-fats dinner">${dm['dinner'].fats}</div>
+                    <div class="meal-calories breakfast">${dm['breakfast'].calories}</div>
+                    <div class="meal-calories lunch">${dm['lunch'].calories}</div>
+                    <div class="meal-calories dinner">${dm['dinner'].calories}</div>
 
-                                <div class="meal-calories breakfast">${dm['breakfast'].calories}</div>
-                                <div class="meal-calories lunch">${dm['lunch'].calories}</div>
-                                <div class="meal-calories dinner">${dm['dinner'].calories}</div>
+                    <div class="meal-carbs meal-total">${dm['breakfast'].carbs + dm['lunch'].carbs + dm['dinner'].carbs}</div>
+                    <div class="meal-proteins meal-total">${dm['breakfast'].proteins + dm['lunch'].proteins + dm['dinner'].proteins}</div>
+                    <div class="meal-fats meal-total">${dm['breakfast'].fats + dm['lunch'].fats + dm['dinner'].fats}</div>
+                    <div class="meal-calories meal-total">${dm['breakfast'].calories + dm['lunch'].calories + dm['dinner'].calories}</div>
 
-                                <div class="meal-carbs meal-total">${dm['breakfast'].carbs + dm['lunch'].carbs + dm['dinner'].carbs}</div>
-                                <div class="meal-proteins meal-total">${dm['breakfast'].proteins + dm['lunch'].proteins + dm['dinner'].proteins}</div>
-                                <div class="meal-fats meal-total">${dm['breakfast'].fats + dm['lunch'].fats + dm['dinner'].fats}</div>
-                                <div class="meal-calories meal-total">${dm['breakfast'].calories + dm['lunch'].calories + dm['dinner'].calories}</div>
-
-                                <div class="meal-carbs meal-remaining">${target_carbs - (dm['breakfast'].carbs + dm['lunch'].carbs + dm['dinner'].carbs)}</div>
-                                <div class="meal-proteins meal-remaining">${target_proteins - (dm['breakfast'].proteins + dm['lunch'].proteins + dm['dinner'].proteins)}</div>
-                                <div class="meal-fats meal-remaining">${target_fats - (dm['breakfast'].fats + dm['lunch'].fats + dm['dinner'].fats)}</div>
+                    <div class="meal-carbs meal-remaining">${target_carbs - (dm['breakfast'].carbs + dm['lunch'].carbs + dm['dinner'].carbs)}</div>
+                    <div class="meal-proteins meal-remaining">${target_proteins - (dm['breakfast'].proteins + dm['lunch'].proteins + dm['dinner'].proteins)}</div>
+                    <div class="meal-fats meal-remaining">${target_fats - (dm['breakfast'].fats + dm['lunch'].fats + dm['dinner'].fats)}</div>
 
 
-                                <!--?                            <div class="desc">${p.summary}</div>-->
-                            </div>
-                        </div>
-<!--?                    </div>-->
-<!--?                    <div class="col-md-3"></div>-->
-<!--?                </div>-->
-<!--?            </div>-->
-
+                </div>
+            </div>
 
         </div>
 
