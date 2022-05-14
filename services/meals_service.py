@@ -1,17 +1,25 @@
 import itertools
 from typing import List
 
-from sqlalchemy import select
+from sqlalchemy import select, orm
 
 from data import db_session
+
 from data.meal import Meal
 
 
 def get_meals(meal_type: str, meal_size: str) -> List[Meal]:
     session = db_session.create_session()
-    query = select(Meal).where(Meal.type == meal_type, Meal.size == meal_size)
-    results = session.execute(query)
-    meals = [r[0] for r in results]
+    # query = select(Meal).options(orm.joinedload(Meal.dislikes)).where(Meal.type == meal_type, Meal.size == meal_size).all()
+    # results = session.execute(query)
+    try:
+        meals = session.query(Meal) \
+            .where(Meal.type == meal_type, Meal.size == meal_size) \
+            .options(orm.joinedload(Meal.dislikes), orm.joinedload(Meal.allergies)) \
+            .all()
+    finally:
+        session.close()
+
     for meal in meals:
         meal.calories = meal.carbs * 4 + meal.proteins * 4 + meal.fats * 9
     return meals
@@ -39,6 +47,9 @@ def get_valid_combos(combos, target_carbs, target_proteins, target_fats):
             valid_combos.append(combo)
     print(len(valid_combos))
     return valid_combos
+
+def apply_filters(combos):
+    ...
 
 def flatten2list(object):
     gather = []
