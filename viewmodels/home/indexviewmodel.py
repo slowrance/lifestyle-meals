@@ -1,5 +1,6 @@
 from typing import List, Optional
 
+from fastapi.encoders import jsonable_encoder
 from starlette.requests import Request
 
 # from services import package_service, user_service
@@ -17,12 +18,16 @@ class IndexViewModel(ViewModelBase):
         self.daily_meals = None
         self.random_meal = None
         self.valid_combo_count = None
+        self.allergies = None
+        self.dislikes = None
 
     async def load(self):
         form = await self.request.form()
         self.target_carbs = int(form.get('target_carbs'))
         self.target_proteins = int(form.get('target_proteins'))
         self.target_fats = int(form.get('target_fats'))
+        self.allergies = form.getlist('allergies')
+        self.dislikes = form.getlist('dislikes')
 
         if not self.target_carbs or self.target_carbs < 0:
             self.error = "Target Carbs must be a number greater than 0."
