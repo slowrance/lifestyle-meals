@@ -30,51 +30,94 @@
                             <input name="target_fats" type="text" placeholder=" Fat Target" class="form-control"
                                    value="${target_fats}" required>
                         </div>
+
+                        <div class="target target-carbs">
+                            <div class="macro-label">Shake Scoop Carbs</div>
+                            <input name="shake_carbs" type="text" placeholder=" Shake Carbs" class="form-control"
+                                   value="${shake_carbs}">
+                        </div>
+                        <div class="target target-proteins">
+                            <div class="macro-label">Shake Scoop Proteins</div>
+                            <input name="shake_proteins" type="text" placeholder=" Shake Proteins" class="form-control"
+                                   value="${shake_proteins}">
+                        </div>
+                        <div class="target target-fats">
+                            <div class="macro-label">Shake Scoop Fats</div>
+                            <input name="shake_fats" type="text" placeholder=" Shake Fats" class="form-control"
+                                   value="${shake_fats}">
+                        </div>
+
+                        <div class="meal-size">
+                            <input type="radio" name="meal_size" value="Large">Large
+                            <input type="radio" name="meal_size" value="Small">Small
+                        </div>
+
+                        <div class="meal-count">
+                            <select name="meal_count" id="meal_count">
+                                <option tal:repeat="num range(3)"
+                                        tal:attributes="value repeat.num.number + 2; selected python: 'selected' if repeat.num.number + 2 == meal_count else None"
+                                        tal:content="repeat.num.number + 2"
+                                >0</option>
+                            </select>
+                        </div>
+
+                        <div class="shake-scoop-count">
+<!--?                            <input type="text" name="shake_scoop_count" value="${shake_scoop_count}">-->
+                            <select name="shake_scoop_count" id="shake_scoop_count">
+                                <option tal:repeat="num range(11)"
+                                        tal:attributes="value repeat.num.index; selected python: 'selected' if repeat.num.index == shake_scoop_count else None"
+                                        tal:content="repeat.num.index"
+                                >0</option>
+                            </select>
+                        </div>
+
                         <div class="filter-title">Filters</div>
                         <div class="allergies">
                             <div class="allergy-title">Allergies</div>
                             <ul>
 
-                                    <li>
-                                        <input name="allergies" value="dairy" id="a-dairy" type="checkbox" class="switch"
+                                <li>
+                                    <input name="allergies" value="dairy" id="a-dairy" type="checkbox" class="switch"
                                             <?python checked = 'checked' if allergies and 'dairy' in allergies else ''?>${checked}>
-                                        <label for="a-dairy">dairy</label>
-                                    </li>
-                                    <li>
-                                        <input name="allergies" value="fish" id="a-fish" type="checkbox" class="switch"
+                                    <label for="a-dairy">dairy</label>
+                                </li>
+                                <li>
+                                    <input name="allergies" value="fish" id="a-fish" type="checkbox" class="switch"
                                             <?python checked = 'checked' if allergies and 'fish' in allergies else ''?>${checked}>
-                                        <label for="a-fish">fish</label>
-                                    </li>
-                                    <li>
-                                        <input name="allergies" value="nuts" id="a-nuts" type="checkbox" class="switch"
+                                    <label for="a-fish">fish</label>
+                                </li>
+                                <li>
+                                    <input name="allergies" value="nuts" id="a-nuts" type="checkbox" class="switch"
                                             <?python checked = 'checked' if allergies and 'nuts' in allergies else ''?>${checked}>
-                                        <label for="a-nuts">nuts</label>
-                                    </li>
-                                    <li>
-                                        <input name="allergies" value="peanuts" id="a-peanuts" type="checkbox" class="switch"
-                                                <?python checked = 'checked' if allergies and 'peanuts' in allergies else ''?>${checked}>
-                                        <label for="a-peanuts">peanuts</label>
-                                    </li>
-                                    <li>
-                                        <input name="allergies" value="sesame" id="a-sesame" type="checkbox" class="switch"
-                                                <?python checked = 'checked' if allergies and 'sesame' in allergies else ''?>${checked}>
-                                        <label for="a-sesame">sesame</label>
-                                    </li>
-                                    <li>
-                                        <input name="allergies" value="shellfish" id="a-shellfish" type="checkbox" class="switch"
-                                                <?python checked = 'checked' if allergies and 'shellfish' in allergies else ''?>${checked}>
-                                        <label for="a-shellfish">shellfish</label>
-                                    </li>
-                                    <li>
-                                        <input name="allergies" value="soy" id="a-soy" type="checkbox" class="switch"
-                                                <?python checked = 'checked' if allergies and 'soy' in allergies else ''?>${checked}>
-                                        <label for="a-soy">soy</label>
-                                    </li>
-                                    <li>
-                                        <input name="allergies" value="wheat" id="a-wheat" type="checkbox" class="switch"
-                                                <?python checked = 'checked' if allergies and 'wheat' in allergies else ''?>${checked}>
-                                        <label for="a-wheat">wheat</label>
-                                    </li>
+                                    <label for="a-nuts">nuts</label>
+                                </li>
+                                <li>
+                                    <input name="allergies" value="peanuts" id="a-peanuts" type="checkbox"
+                                           class="switch"
+                                            <?python checked = 'checked' if allergies and 'peanuts' in allergies else ''?>${checked}>
+                                    <label for="a-peanuts">peanuts</label>
+                                </li>
+                                <li>
+                                    <input name="allergies" value="sesame" id="a-sesame" type="checkbox" class="switch"
+                                            <?python checked = 'checked' if allergies and 'sesame' in allergies else ''?>${checked}>
+                                    <label for="a-sesame">sesame</label>
+                                </li>
+                                <li>
+                                    <input name="allergies" value="shellfish" id="a-shellfish" type="checkbox"
+                                           class="switch"
+                                            <?python checked = 'checked' if allergies and 'shellfish' in allergies else ''?>${checked}>
+                                    <label for="a-shellfish">shellfish</label>
+                                </li>
+                                <li>
+                                    <input name="allergies" value="soy" id="a-soy" type="checkbox" class="switch"
+                                            <?python checked = 'checked' if allergies and 'soy' in allergies else ''?>${checked}>
+                                    <label for="a-soy">soy</label>
+                                </li>
+                                <li>
+                                    <input name="allergies" value="wheat" id="a-wheat" type="checkbox" class="switch"
+                                            <?python checked = 'checked' if allergies and 'wheat' in allergies else ''?>${checked}>
+                                    <label for="a-wheat">wheat</label>
+                                </li>
 
                             </ul>
                         </div>
@@ -83,42 +126,44 @@
                             <ul>
                                 <li>
                                     <input name="dislikes" value="dairy" id="d-dairy" type="checkbox" class="switch"
-                                        <?python checked = 'checked' if dislikes and 'dairy' in dislikes else ''?>${checked}>
+                                            <?python checked = 'checked' if dislikes and 'dairy' in dislikes else ''?>${checked}>
                                     <label for="d-dairy">dairy</label>
                                 </li>
                                 <li>
                                     <input name="dislikes" value="fish" id="d-fish" type="checkbox" class="switch"
-                                        <?python checked = 'checked' if dislikes and 'fish' in dislikes else ''?>${checked}>
+                                            <?python checked = 'checked' if dislikes and 'fish' in dislikes else ''?>${checked}>
                                     <label for="d-fish">fish</label>
                                 </li>
                                 <li>
                                     <input name="dislikes" value="gluten" id="d-gluten" type="checkbox" class="switch"
-                                        <?python checked = 'checked' if dislikes and 'gluten' in dislikes else ''?>${checked}>
+                                            <?python checked = 'checked' if dislikes and 'gluten' in dislikes else ''?>${checked}>
                                     <label for="d-gluten">gluten</label>
                                 </li>
                                 <li>
                                     <input name="dislikes" value="nuts" id="d-nuts" type="checkbox" class="switch"
-                                        <?python checked = 'checked' if dislikes and 'nuts' in dislikes else ''?>${checked}>
+                                            <?python checked = 'checked' if dislikes and 'nuts' in dislikes else ''?>${checked}>
                                     <label for="d-nuts">nuts</label>
                                 </li>
                                 <li>
                                     <input name="dislikes" value="pork" id="d-pork" type="checkbox" class="switch"
-                                        <?python checked = 'checked' if dislikes and 'pork' in dislikes else ''?>${checked}>
+                                            <?python checked = 'checked' if dislikes and 'pork' in dislikes else ''?>${checked}>
                                     <label for="d-pork">pork</label>
                                 </li>
                                 <li>
-                                    <input name="dislikes" value="shellfish" id="d-shellfish" type="checkbox" class="switch"
-                                        <?python checked = 'checked' if dislikes and 'shellfish' in dislikes else ''?>${checked}>
+                                    <input name="dislikes" value="shellfish" id="d-shellfish" type="checkbox"
+                                           class="switch"
+                                            <?python checked = 'checked' if dislikes and 'shellfish' in dislikes else ''?>${checked}>
                                     <label for="d-shellfish">shellfish</label>
                                 </li>
                                 <li>
                                     <input name="dislikes" value="spicy" id="d-spicy" type="checkbox" class="switch"
-                                        <?python checked = 'checked' if dislikes and 'spicy' in dislikes else ''?>${checked}>
+                                            <?python checked = 'checked' if dislikes and 'spicy' in dislikes else ''?>${checked}>
                                     <label for="d-spicy">spicy</label>
                                 </li>
                                 <li>
-                                    <input name="dislikes" value="tomatoes" id="d-tomatoes" type="checkbox" class="switch"
-                                        <?python checked = 'checked' if dislikes and 'tomatoes' in dislikes else ''?>${checked}>
+                                    <input name="dislikes" value="tomatoes" id="d-tomatoes" type="checkbox"
+                                           class="switch"
+                                            <?python checked = 'checked' if dislikes and 'tomatoes' in dislikes else ''?>${checked}>
                                     <label for="d-tomatoes">tomatoes</label>
                                 </li>
                             </ul>
@@ -156,14 +201,17 @@
                     <div class="meal-carbs breakfast">${dm['breakfast'].carbs}</div>
                     <div class="meal-carbs lunch">${dm['lunch'].carbs}</div>
                     <div class="meal-carbs dinner">${dm['dinner'].carbs}</div>
+                    <div class="meal-carbs shake">${shake_scoop_count * shake_carbs}</div>
 
                     <div class="meal-proteins breakfast">${dm['breakfast'].proteins}</div>
                     <div class="meal-proteins lunch">${dm['lunch'].proteins}</div>
                     <div class="meal-proteins dinner">${dm['dinner'].proteins}</div>
+                    <div class="meal-proteins shake">${shake_scoop_count * shake_proteins}</div>
 
                     <div class="meal-fats breakfast">${dm['breakfast'].fats}</div>
                     <div class="meal-fats lunch">${dm['lunch'].fats}</div>
                     <div class="meal-fats dinner">${dm['dinner'].fats}</div>
+                    <div class="meal-fats shake">${shake_scoop_count * shake_fats}</div>
 
                     <div class="meal-calories breakfast">${dm['breakfast'].calories}</div>
                     <div class="meal-calories lunch">${dm['lunch'].calories}</div>

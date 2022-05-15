@@ -189,6 +189,10 @@ body {
     grid-row: 4;
 }
 
+.shake {
+    grid-row: 4;
+}
+
 .meal-total {
     grid-row: 5;
 }
