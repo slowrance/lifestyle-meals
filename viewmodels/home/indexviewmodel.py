@@ -25,6 +25,7 @@ class IndexViewModel(ViewModelBase):
         self.dislikes = None
         self.shake_scoop_count = 0
         self.meal_count = 3
+        self.meal_size = 'Large'
 
     async def load(self):
         form = await self.request.form()
@@ -38,6 +39,7 @@ class IndexViewModel(ViewModelBase):
         self.dislikes = form.getlist('dislikes')
         self.shake_scoop_count = int(form.get('shake_scoop_count'))
         self.meal_count = int(form.get('meal_count'))
+        self.meal_size = form.get('meal_size')
 
         if not self.target_carbs or self.target_carbs < 0:
             self.error = "Target Carbs must be a number greater than 0."

@@ -124,6 +124,20 @@ body {
     margin: 15px auto;
     color: black;
 }
+
+.parameters {
+    grid-column: 1 / span 6;
+}
+.parameters-container{
+    display: flex;
+
+}
+
+.parameter {
+    flex: 1;
+    min-width: 20%
+}
+
 .allergies {
     grid-column: 1 / span 3;
     min-width: 170px;
@@ -142,7 +156,15 @@ body {
     padding: 20px;
 }
 
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.filter-category {
+    flex: 1;
+
+}
 
 .btn-generate {
     flex-basis: 100%;
@@ -190,15 +212,15 @@ body {
 }
 
 .shake {
-    grid-row: 4;
-}
-
-.meal-total {
     grid-row: 5;
 }
 
-.meal-remaining {
+.meal-total {
     grid-row: 6;
+}
+
+.meal-remaining {
+    grid-row: 7;
 }
 
 .meal.meal-total, .meal.meal-remaining {
@@ -324,8 +346,10 @@ ul {
 }
 
 ul li {
-    margin: 16px 0;
+    margin: 16px 20px 16px 10px;
     position: relative;
+    min-width: 125px;
+
 }
 
 
