@@ -48,8 +48,8 @@
                         </div>
                         <div class="parameters parameters-container">
                             <div class="meal-size parameter">Meal Size:
-                                <input type="radio" name="meal_size" value="Large" tal:attributes="checked python: 'checked' if meal_size == 'Large' else None">Large
-                                <input type="radio" name="meal_size" value="Small" tal:attributes="checked python: 'checked' if meal_size == 'Small' else None">Small
+                                <input type="radio" name="meal_size" value="Large" tal:attributes="checked python: 'checked' if meal_size == 'Large' else None"><span class="meal-size-label">Large</span>
+                                <input type="radio" name="meal_size" value="Small" tal:attributes="checked python: 'checked' if meal_size == 'Small' else None"><span class="meal-size-label">Small</span>
                             </div>
 
                             <div class="meal-count parameter">

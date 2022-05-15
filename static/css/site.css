@@ -130,12 +130,23 @@ body {
 }
 .parameters-container{
     display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    align-content: center;
 
 }
 
 .parameter {
     flex: 1;
-    min-width: 20%
+    min-width: 20%;
+    margin: 0 auto;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.meal-size-label {
+    font-weight: normal;
 }
 
 .allergies {
