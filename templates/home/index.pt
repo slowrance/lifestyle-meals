@@ -135,8 +135,7 @@
 
 
             <div class="stat-container" tal:condition="valid_combo_count">
-                <div class="stats">There are ${valid_combo_count} total meal combinations that meet those macro
-                    requirements
+                <div class="stats">There are ${valid_combo_count} total meal combinations that meet your requirements
                 </div>
             </div>
 
