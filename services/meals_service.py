@@ -48,8 +48,22 @@ def get_valid_combos(combos, target_carbs, target_proteins, target_fats):
     print(len(valid_combos))
     return valid_combos
 
-def apply_filters(combos):
-    ...
+def apply_filters(combos, allergies_filter, dislikes_filter):
+    filtered_combos = []
+    for combo in combos:
+        valid = True
+        for meal in combo.values():
+            for allergy in allergies_filter:
+                for meal_allergy in meal.allergies:
+                    if allergy == meal_allergy.name:
+                        valid = False
+            for dislike in dislikes_filter:
+                for meal_dislike in meal.dislikes:
+                    if dislike == meal_dislike.name:
+                        valid = False
+        if valid:
+            filtered_combos.append(combo)
+    return filtered_combos
 
 def flatten2list(object):
     gather = []
