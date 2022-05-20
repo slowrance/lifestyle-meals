@@ -23,7 +23,7 @@ def index(request: Request):
 async def index(request: Request):
     vm = IndexViewModel(request)
     await vm.load()
-    combos = get_combos(vm.meal_size)
+    combos = get_combos(vm.meal_size, vm.meal_count, vm.include_breakfast)
     valid_combos = get_valid_combos(combos, vm.target_carbs, vm.target_proteins, vm.target_fats)
     filtered_combos = apply_filters(valid_combos, vm.allergies, vm.dislikes)
     random_meal = random.choice(filtered_combos)

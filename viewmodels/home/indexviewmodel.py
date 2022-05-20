@@ -26,6 +26,7 @@ class IndexViewModel(ViewModelBase):
         self.shake_scoop_count = 0
         self.meal_count = 3
         self.meal_size = 'Large'
+        self.include_breakfast = True
 
     async def load(self):
         form = await self.request.form()

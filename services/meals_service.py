@@ -24,15 +24,22 @@ def get_meals(meal_type: str, meal_size: str) -> List[Meal]:
         meal.calories = meal.carbs * 4 + meal.proteins * 4 + meal.fats * 9
     return meals
 
-def get_combos(meal_size):
+def get_combos(meal_size, meal_count, include_breakfast=True):
+    entree_count = meal_count
+    if include_breakfast:
+        entree_count -= 1
     breakfasts = get_meals('Breakfast', meal_size)
     entrees = get_meals('Entree', meal_size)
-    entrees = list(itertools.combinations_with_replacement(entrees, 2))
+    entrees = list(itertools.combinations_with_replacement(entrees, entree_count))
     combos = list(itertools.product(breakfasts, entrees))
     combos = [flatten2list(combo) for combo in combos]
     daily_meals = []
-    for combo in combos:
-        daily_meals.append({'breakfast': combo[0], 'lunch': combo[1], 'dinner': combo[2]})
+    for idx, combo in enumerate(combos):
+        daily_meal = dict()
+        for m in range(meal_count):
+            daily_meal[f'meal{m+1}'] = combo[idx]
+        daily_meals.append(daily_meal)
+        # daily_meals.append({'breakfast': combo[0], 'lunch': combo[1], 'dinner': combo[2]})
     print(len(combos))
     return daily_meals
 
