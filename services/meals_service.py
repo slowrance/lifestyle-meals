@@ -28,10 +28,10 @@ def get_combos(meal_size, meal_count, include_breakfast=True):
     entree_count = meal_count
     if include_breakfast:
         entree_count -= 1
-    breakfasts = get_meals('Breakfast', meal_size)
+        breakfasts = get_meals('Breakfast', meal_size)
     entrees = get_meals('Entree', meal_size)
     entrees = list(itertools.combinations_with_replacement(entrees, entree_count))
-    combos = list(itertools.product(breakfasts, entrees))
+    combos = list(itertools.product(breakfasts, entrees)) if include_breakfast else entrees
     combos = [flatten2list(combo) for combo in combos]
     daily_meals = []
     for idx, combo in enumerate(combos):

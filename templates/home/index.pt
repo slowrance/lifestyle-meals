@@ -52,6 +52,14 @@
                                 <input type="radio" name="meal_size" value="Small" tal:attributes="checked python: 'checked' if meal_size == 'Small' else None"><span class="meal-size-label">Small</span>
                             </div>
 
+                            <div class="include-breakfast parameter">
+                                <label for="include_breakfast">Breakfast? </label>
+                                <select name="include_breakfast" id="include_breakfast">
+                                    <option value="Yes" tal:attributes="selected python: 'selected' if include_breakfast else None">Yes</option>
+                                    <option value="No" tal:attributes="selected python: 'selected' if not include_breakfast else None">No</option>
+                                </select>
+                            </div>
+
                             <div class="meal-count parameter">
                                 <label for="meal_count">Meals Per Day: </label>
                                 <select name="meal_count" id="meal_count">

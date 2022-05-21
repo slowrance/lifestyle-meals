@@ -41,6 +41,7 @@ class IndexViewModel(ViewModelBase):
         self.shake_scoop_count = int(form.get('shake_scoop_count'))
         self.meal_count = int(form.get('meal_count'))
         self.meal_size = form.get('meal_size')
+        self.include_breakfast = True if form.get('include_breakfast') == 'Yes' else False
 
         if not self.target_carbs or self.target_carbs < 0:
             self.error = "Target Carbs must be a number greater than 0."

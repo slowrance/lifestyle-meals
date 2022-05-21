@@ -114,16 +114,18 @@ body {
     margin-left: 15px;
     margin-right: 15px;
     align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
 .parameter {
-    flex: 1;
-    min-width: 20%;
+
+    width: 300px;
     margin: 0 auto;
     color: black;
     font-weight: bold;
-    text-align: center;
+
 }
 
 .meal-size-label {
@@ -361,7 +363,12 @@ footer a {
 }
 
 .error-msg {
-    color: #b30000;
+    background: #b30000;
+    color: white;
+    grid-column: 1 / -1;
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px 0;
 }
 
 .page-core {

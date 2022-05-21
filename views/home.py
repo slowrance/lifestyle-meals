@@ -26,11 +26,13 @@ async def index(request: Request):
     combos = get_combos(vm.meal_size, vm.meal_count, vm.include_breakfast)
     valid_combos = get_valid_combos(combos, vm.target_carbs, vm.target_proteins, vm.target_fats)
     filtered_combos = apply_filters(valid_combos, vm.allergies, vm.dislikes)
-    random_meal = random.choice(filtered_combos)
+    # random_meal = random.choice(filtered_combos)
+    if len(filtered_combos) == 0:
+        vm.error = 'There are no meal combinations. Please adjust your targets or filters.'
     if len(filtered_combos) < 6:
         vm.daily_meals = filtered_combos
     else:
         vm.daily_meals = random.sample(filtered_combos, 6)
-    vm.random_meal = random_meal
+    # vm.random_meal = random_meal
     vm.valid_combo_count = len(filtered_combos)
     return vm.to_dict()
