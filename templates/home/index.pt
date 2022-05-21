@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="targets">
-                <h2>Macro Targets</h2>
+
 
                 <form action="" method="POST" class="macros-form">
                     <div class="grid-container">
@@ -74,7 +74,7 @@
                             </div>
                         </div>
 
-                        <div class="filter-title">Filters</div>
+
                         <div class="allergies">
                             <div class="allergy-title">Allergies</div>
                             <ul>

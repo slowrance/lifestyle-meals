@@ -19,26 +19,15 @@ body {
     color: white;
     font-size: 18px;
 
-    padding: 50px 0;
+    padding: 10px 0 15px 0;
     text-align: center;
 }
 
 .hero h1 {
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
-.hero a {
-    color: white;
-    text-decoration: underline;
-}
-
-.hero-inner {
-    max-width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-}
 
 .target {
     flex: 1 100px;
@@ -46,7 +35,7 @@ body {
     font-size: 20px;
     padding: 20px;
     background: #02377c;
-    margin: 20px;
+
 
 }
 
@@ -95,17 +84,9 @@ body {
 .targets {
     color: #ebebeb;
     background-color: #0073b7;
-    padding: 50px 0;
+    padding: 10px 0 50px 0;
 }
 
-.targets > h2 {
-
-    color: white;
-    font-size: 2em;
-
-
-    text-align: center;
-}
 
 .target-carbs {
     grid-column: 1 / span 2;
