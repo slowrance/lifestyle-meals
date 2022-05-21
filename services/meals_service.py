@@ -37,7 +37,7 @@ def get_combos(meal_size, meal_count, include_breakfast=True):
     for idx, combo in enumerate(combos):
         daily_meal = dict()
         for m in range(meal_count):
-            daily_meal[f'meal{m+1}'] = combo[idx]
+            daily_meal[f'meal{m+1}'] = combo[m]
         daily_meals.append(daily_meal)
         # daily_meals.append({'breakfast': combo[0], 'lunch': combo[1], 'dinner': combo[2]})
     print(len(combos))
@@ -47,9 +47,9 @@ def get_valid_combos(combos, target_carbs, target_proteins, target_fats):
     wiggle_room = 5
     valid_combos = []
     for combo in combos:
-        carbs = combo['breakfast'].carbs + combo['lunch'].carbs + combo['dinner'].carbs
-        proteins = combo['breakfast'].proteins + combo['lunch'].proteins + combo['dinner'].proteins
-        fats = combo['breakfast'].fats + combo['lunch'].fats + combo['dinner'].fats
+        carbs = sum(m.carbs for m in combo.values())
+        proteins = sum(m.proteins for m in combo.values())
+        fats = sum(m.fats for m in combo.values())
         if carbs <= target_carbs + wiggle_room and proteins <= target_proteins + wiggle_room and fats <= target_fats + wiggle_room:
             valid_combos.append(combo)
     print(len(valid_combos))

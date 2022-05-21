@@ -197,42 +197,61 @@
                     <div class="meal-label meal-fats label">Fats</div>
                     <div class="meal-label meal-calories label">Calories</div>
 
-                    <div class="meal breakfast"><span class="label">Breakfast: </span>${dm['breakfast'].name}</div>
-                    <div class="meal lunch"><span class="label">Lunch: </span>${dm['lunch'].name}</div>
-                    <div class="meal dinner"><span class="label">Dinner: </span>${dm['dinner'].name}</div>
+
+<!--?                    <div tal:repeat="num range(meal_count)" class="meal-line">-->
+<!--?                        <?python meal_num = f'meal{num+1}' ?>-->
+<!--?                        <div class="meal ${meal_num}"><span class="label">${meal_num}: </span>${dm[meal_num].name}</div>-->
+<!--?                    </div>-->
+                    <div class="meal meal1"><span class="label">Meal 1: </span>${dm['meal1'].name}</div>
+                    <div class="meal meal2"><span class="label">Meal 2: </span>${dm['meal2'].name}</div>
+                    <div class="meal meal3"><span class="label">Meal 3: </span>${dm['meal3'].name}</div>
+                    <div class="meal meal4" tal:condition="exists:dm['meal4']"><span class="label">Meal 4: </span>${dm['meal4'].name}</div>
+                    <div class="meal meal5" tal:condition="exists:dm['meal5']"><span class="label">Meal 5: </span>${dm['meal5'].name}</div>
                     <div class="meal shake-total"><span class="label">Shake Macros: </span>${shake_scoop_count} scoops</div>
                     <div class="meal meal-total"><span class="label">Total: </span></div>
                     <div class="meal meal-remaining"><span class="label">Remaining: </span></div>
 
-                    <div class="meal-carbs breakfast">${dm['breakfast'].carbs}</div>
-                    <div class="meal-carbs lunch">${dm['lunch'].carbs}</div>
-                    <div class="meal-carbs dinner">${dm['dinner'].carbs}</div>
+                    <div class="meal-carbs meal1">${dm['meal1'].carbs}</div>
+                    <div class="meal-carbs meal2">${dm['meal2'].carbs}</div>
+                    <div class="meal-carbs meal3">${dm['meal3'].carbs}</div>
+                    <div class="meal-carbs meal4" tal:condition="exists:dm['meal4']">${dm['meal4'].carbs}</div>
+                    <div class="meal-carbs meal5" tal:condition="exists:dm['meal5']">${dm['meal4'].carbs}</div>
                     <div class="meal-carbs shake">${shake_scoop_count * shake_carbs}</div>
 
-                    <div class="meal-proteins breakfast">${dm['breakfast'].proteins}</div>
-                    <div class="meal-proteins lunch">${dm['lunch'].proteins}</div>
-                    <div class="meal-proteins dinner">${dm['dinner'].proteins}</div>
+                    <div class="meal-proteins meal1">${dm['meal1'].proteins}</div>
+                    <div class="meal-proteins meal2">${dm['meal2'].proteins}</div>
+                    <div class="meal-proteins meal3">${dm['meal3'].proteins}</div>
+                    <div class="meal-proteins meal4" tal:condition="exists:dm['meal4']">${dm['meal4'].proteins}</div>
+                    <div class="meal-proteins meal5" tal:condition="exists:dm['meal5']">${dm['meal5'].proteins}</div>
                     <div class="meal-proteins shake">${shake_scoop_count * shake_proteins}</div>
 
-                    <div class="meal-fats breakfast">${dm['breakfast'].fats}</div>
-                    <div class="meal-fats lunch">${dm['lunch'].fats}</div>
-                    <div class="meal-fats dinner">${dm['dinner'].fats}</div>
+                    <div class="meal-fats meal1">${dm['meal1'].fats}</div>
+                    <div class="meal-fats meal2">${dm['meal2'].fats}</div>
+                    <div class="meal-fats meal3">${dm['meal3'].fats}</div>
+                    <div class="meal-fats meal4" tal:condition="exists:dm['meal4']">${dm['meal4'].fats}</div>
+                    <div class="meal-fats meal5" tal:condition="exists:dm['meal5']">${dm['meal5'].fats}</div>
                     <div class="meal-fats shake">${shake_scoop_count * shake_fats}</div>
 
-                    <div class="meal-calories breakfast">${dm['breakfast'].calories}</div>
-                    <div class="meal-calories lunch">${dm['lunch'].calories}</div>
-                    <div class="meal-calories dinner">${dm['dinner'].calories}</div>
+                    <div class="meal-calories meal1">${dm['meal1'].calories}</div>
+                    <div class="meal-calories meal2">${dm['meal2'].calories}</div>
+                    <div class="meal-calories meal3">${dm['meal3'].calories}</div>
+                    <div class="meal-calories meal4" tal:condition="exists:dm['meal4']">${dm['meal4'].calories}</div>
+                    <div class="meal-calories meal5" tal:condition="exists:dm['meal5']">${dm['meal5'].calories}</div>
                     <?python shake_calories = shake_scoop_count * shake_carbs * 4 + shake_scoop_count * shake_proteins * 4 + shake_scoop_count * shake_fats * 9 ?>
                     <div class="meal-calories shake">${shake_calories}</div>
 
-                    <div class="meal-carbs meal-total">${dm['breakfast'].carbs + dm['lunch'].carbs + dm['dinner'].carbs + shake_carbs * shake_scoop_count}</div>
-                    <div class="meal-proteins meal-total">${dm['breakfast'].proteins + dm['lunch'].proteins + dm['dinner'].proteins + shake_proteins * shake_scoop_count}</div>
-                    <div class="meal-fats meal-total">${dm['breakfast'].fats + dm['lunch'].fats + dm['dinner'].fats + shake_fats * shake_scoop_count}</div>
-                    <div class="meal-calories meal-total">${dm['breakfast'].calories + dm['lunch'].calories + dm['dinner'].calories + shake_calories}</div>
+                    <?python carbs_total = sum(m.carbs for m in dm.values()) ?>
+                    <?python proteins_total = sum(m.proteins for m in dm.values()) ?>
+                    <?python fats_total = sum(m.fats for m in dm.values()) ?>
+                    <?python calories_total = sum(m.calories for m in dm.values()) ?>
+                    <div class="meal-carbs meal-total">${carbs_total + shake_carbs * shake_scoop_count}</div>
+                    <div class="meal-proteins meal-total">${proteins_total + shake_proteins * shake_scoop_count}</div>
+                    <div class="meal-fats meal-total">${fats_total + shake_fats * shake_scoop_count}</div>
+                    <div class="meal-calories meal-total">${calories_total + shake_calories}</div>
 
-                    <div class="meal-carbs meal-remaining">${target_carbs - (dm['breakfast'].carbs + dm['lunch'].carbs + dm['dinner'].carbs + shake_carbs * shake_scoop_count)}</div>
-                    <div class="meal-proteins meal-remaining">${target_proteins - (dm['breakfast'].proteins + dm['lunch'].proteins + dm['dinner'].proteins + shake_proteins * shake_scoop_count)}</div>
-                    <div class="meal-fats meal-remaining">${target_fats - (dm['breakfast'].fats + dm['lunch'].fats + dm['dinner'].fats + shake_fats * shake_scoop_count)}</div>
+                    <div class="meal-carbs meal-remaining">${target_carbs - (carbs_total + shake_carbs * shake_scoop_count)}</div>
+                    <div class="meal-proteins meal-remaining">${target_proteins - (proteins_total + shake_proteins * shake_scoop_count)}</div>
+                    <div class="meal-fats meal-remaining">${target_fats - (fats_total + shake_fats * shake_scoop_count)}</div>
 
 
                 </div>

@@ -210,44 +210,44 @@ body {
     grid-column: 5;
 }
 
-.breakfast {
+.meal1 {
     grid-row: 2;
 }
 
-.lunch {
+.meal2 {
     grid-row: 3;
 }
 
-.dinner {
+.meal3 {
     grid-row: 4;
 }
 
-.shake {
+.meal4 {
     grid-row: 5;
 }
 
-.meal-total {
+.meal5 {
     grid-row: 6;
 }
 
+/*.shake {*/
+/*    grid-row: 7;*/
+/*}*/
+
+.meal-total {
+    grid-row: 8;
+    border-top: 4px double #212121;
+
+}
+
 .meal-remaining {
-    grid-row: 7;
+    grid-row: 9;
 }
 
 .meal.meal-total, .meal.meal-remaining {
     text-align: right;
     padding-right: 10px;
     border-top: none;
-}
-
-
-.meal-total {
-    grid-row: 6;
-    border-top: 4px double #212121;
-}
-
-.meal-remaining {
-    grid-row: 7;
 }
 
 .pypi-stats {
