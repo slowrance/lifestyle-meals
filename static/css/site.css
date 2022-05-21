@@ -4,11 +4,11 @@ body {
     padding: 0;
     font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
     font-size: 17px;
-    background-color: #006dad;
+    background-color: #0073b7;
 }
 
 .main_content {
-    background: #fff;
+    background: #0073b7;
     margin: 0;
     padding: 0 0 50px;
 }
@@ -83,7 +83,7 @@ body {
 
 .targets {
     color: #ebebeb;
-    background-color: #0073b7;
+    background: #0073b7;
     padding: 10px 0 50px 0;
 }
 
@@ -249,6 +249,7 @@ body {
     max-width: 950px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .stats {
