@@ -63,9 +63,9 @@
                             <div class="meal-count parameter">
                                 <label for="meal_count">Meals Per Day: </label>
                                 <select name="meal_count" id="meal_count">
-                                    <option tal:repeat="num range(3)"
-                                            tal:attributes="value repeat.num.number + 2; selected python: 'selected' if repeat.num.number + 2 == meal_count else None"
-                                            tal:content="repeat.num.number + 2"
+                                    <option tal:repeat="num range(4)"
+                                            tal:attributes="value repeat.num.number + 1; selected python: 'selected' if repeat.num.number + 1 == meal_count else None"
+                                            tal:content="repeat.num.number + 1"
                                     >0</option>
                                 </select>
                             </div>
@@ -212,7 +212,7 @@
 <!--?                    </div>-->
                     <div class="meal meal1"><span class="label">Meal 1: </span>${dm['meal1'].name}</div>
                     <div class="meal meal2"><span class="label">Meal 2: </span>${dm['meal2'].name}</div>
-                    <div class="meal meal3"><span class="label">Meal 3: </span>${dm['meal3'].name}</div>
+                    <div class="meal meal3" tal:condition="exists:dm['meal3']"><span class="label">Meal 3: </span>${dm['meal3'].name}</div>
                     <div class="meal meal4" tal:condition="exists:dm['meal4']"><span class="label">Meal 4: </span>${dm['meal4'].name}</div>
                     <div class="meal meal5" tal:condition="exists:dm['meal5']"><span class="label">Meal 5: </span>${dm['meal5'].name}</div>
                     <div class="meal shake-total"><span class="label">Shake Macros: </span>${shake_scoop_count} scoops</div>
@@ -221,28 +221,28 @@
 
                     <div class="meal-carbs meal1">${dm['meal1'].carbs}</div>
                     <div class="meal-carbs meal2">${dm['meal2'].carbs}</div>
-                    <div class="meal-carbs meal3">${dm['meal3'].carbs}</div>
+                    <div class="meal-carbs meal3" tal:condition="exists:dm['meal3']">${dm['meal3'].carbs}</div>
                     <div class="meal-carbs meal4" tal:condition="exists:dm['meal4']">${dm['meal4'].carbs}</div>
                     <div class="meal-carbs meal5" tal:condition="exists:dm['meal5']">${dm['meal4'].carbs}</div>
                     <div class="meal-carbs shake">${shake_scoop_count * shake_carbs}</div>
 
                     <div class="meal-proteins meal1">${dm['meal1'].proteins}</div>
                     <div class="meal-proteins meal2">${dm['meal2'].proteins}</div>
-                    <div class="meal-proteins meal3">${dm['meal3'].proteins}</div>
+                    <div class="meal-proteins meal3" tal:condition="exists:dm['meal3']">${dm['meal3'].proteins}</div>
                     <div class="meal-proteins meal4" tal:condition="exists:dm['meal4']">${dm['meal4'].proteins}</div>
                     <div class="meal-proteins meal5" tal:condition="exists:dm['meal5']">${dm['meal5'].proteins}</div>
                     <div class="meal-proteins shake">${shake_scoop_count * shake_proteins}</div>
 
                     <div class="meal-fats meal1">${dm['meal1'].fats}</div>
                     <div class="meal-fats meal2">${dm['meal2'].fats}</div>
-                    <div class="meal-fats meal3">${dm['meal3'].fats}</div>
+                    <div class="meal-fats meal3" tal:condition="exists:dm['meal3']">${dm['meal3'].fats}</div>
                     <div class="meal-fats meal4" tal:condition="exists:dm['meal4']">${dm['meal4'].fats}</div>
                     <div class="meal-fats meal5" tal:condition="exists:dm['meal5']">${dm['meal5'].fats}</div>
                     <div class="meal-fats shake">${shake_scoop_count * shake_fats}</div>
 
                     <div class="meal-calories meal1">${dm['meal1'].calories}</div>
                     <div class="meal-calories meal2">${dm['meal2'].calories}</div>
-                    <div class="meal-calories meal3">${dm['meal3'].calories}</div>
+                    <div class="meal-calories meal3" tal:condition="exists:dm['meal3']">${dm['meal3'].calories}</div>
                     <div class="meal-calories meal4" tal:condition="exists:dm['meal4']">${dm['meal4'].calories}</div>
                     <div class="meal-calories meal5" tal:condition="exists:dm['meal5']">${dm['meal5'].calories}</div>
                     <?python shake_calories = shake_scoop_count * shake_carbs * 4 + shake_scoop_count * shake_proteins * 4 + shake_scoop_count * shake_fats * 9 ?>
