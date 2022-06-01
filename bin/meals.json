@@ -38,8 +38,8 @@
       "name": "Flat Iron Steak",
       "size": "Large",
       "type": "Entree",
-      "carbs": 36,
-      "proteins": 47,
+      "carbs": 25,
+      "proteins": 38,
       "fats": 22,
       "allergies": ["nuts"],
       "dislikes": ["nuts"]
