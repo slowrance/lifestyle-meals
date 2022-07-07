@@ -9,7 +9,7 @@
       "proteins": 47,
       "fats": 6,
       "allergies": ["dairy", "wheat"],
-      "dislikes": ["gluten", "dairy", "spicy"]
+      "dislikes": ["gluten", "dairy", "spicy", "chicken"]
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "proteins": 55,
       "fats": 33,
       "allergies": [],
-      "dislikes": ["spicy"]
+      "dislikes": ["spicy", "beef"]
     },
     {
       "id": 3,
