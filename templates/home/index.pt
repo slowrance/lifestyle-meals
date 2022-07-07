@@ -137,6 +137,16 @@
                             <ul>
                                 <div class="filter-container">
                                 <li>
+                                    <input name="dislikes" value="beef" id="d-beef" type="checkbox" class="switch filter-category"
+                                            <?python checked = 'checked' if dislikes and 'beef' in dislikes else ''?>${checked}>
+                                    <label for="d-beef">beef</label>
+                                </li>
+                                <li>
+                                    <input name="dislikes" value="chicken" id="d-chicken" type="checkbox" class="switch filter-category"
+                                            <?python checked = 'checked' if dislikes and 'chicken' in dislikes else ''?>${checked}>
+                                    <label for="d-chicken">chicken</label>
+                                </li>
+                                <li>
                                     <input name="dislikes" value="dairy" id="d-dairy" type="checkbox" class="switch filter-category"
                                             <?python checked = 'checked' if dislikes and 'dairy' in dislikes else ''?>${checked}>
                                     <label for="d-dairy">dairy</label>
@@ -177,6 +187,12 @@
                                            class="switch filter-category"
                                             <?python checked = 'checked' if dislikes and 'tomatoes' in dislikes else ''?>${checked}>
                                     <label for="d-tomatoes">tomatoes</label>
+                                </li>
+                                <li>
+                                    <input name="dislikes" value="turkey" id="d-turkey" type="checkbox"
+                                           class="switch filter-category"
+                                            <?python checked = 'checked' if dislikes and 'turkey' in dislikes else ''?>${checked}>
+                                    <label for="d-turkey">turkey</label>
                                 </li>
                                 </div>
                             </ul>
