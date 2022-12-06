@@ -89,28 +89,6 @@
       "dislikes": ["fish", "nuts"]
     },
     {
-      "id": 9,
-      "name": "Salmon Carbonara",
-      "size": "Large",
-      "type": "Entree",
-      "carbs": 21,
-      "proteins": 49,
-      "fats": 32,
-      "allergies": ["fish"],
-      "dislikes": ["fish", "spicy"]
-    },
-    {
-      "id": 10,
-      "name": "Shoyu Marinated Steak",
-      "size": "Large",
-      "type": "Entree",
-      "carbs": 32,
-      "proteins": 39,
-      "fats": 21,
-      "allergies": ["soy"],
-      "dislikes": ["spicy", "beef"]
-    },
-    {
       "id": 11,
       "name": "Shoyu Marinated Tilapia",
       "size": "Large",
@@ -120,17 +98,6 @@
       "fats": 17,
       "allergies": ["dairy", "nuts", "fish", "soy"],
       "dislikes": ["nuts", "fish", "dairy", "spicy"]
-    },
-    {
-      "id": 12,
-      "name": "Shrimp & Grits",
-      "size": "Large",
-      "type": "Entree",
-      "carbs": 52,
-      "proteins": 50,
-      "fats": 15,
-      "allergies": ["shellfish"],
-      "dislikes": ["shellfish"]
     },
     {
       "id": 13,
@@ -243,28 +210,6 @@
       "dislikes": ["fish", "nuts"]
     },
     {
-      "id": 23,
-      "name": "Salmon Carbonara",
-      "size": "Small",
-      "type": "Entree",
-      "carbs": 14,
-      "proteins": 33,
-      "fats": 4,
-      "allergies": ["fish"],
-      "dislikes": ["fish", "spicy"]
-    },
-    {
-      "id": 24,
-      "name": "Shoyu Marinated Steak",
-      "size": "Small",
-      "type": "Entree",
-      "carbs": 24,
-      "proteins": 26,
-      "fats": 14,
-      "allergies": ["soy"],
-      "dislikes": ["spicy", "beef"]
-    },
-    {
       "id": 25,
       "name": "Shoyu Marinated Tilapia",
       "size": "Small",
@@ -274,17 +219,6 @@
       "fats": 12,
       "allergies": ["dairy", "nuts", "fish", "soy"],
       "dislikes": ["nuts", "fish", "dairy", "spicy"]
-    },
-    {
-      "id": 26,
-      "name": "Shrimp & Grits",
-      "size": "Small",
-      "type": "Entree",
-      "carbs": 35,
-      "proteins": 33,
-      "fats": 10,
-      "allergies": ["shellfish"],
-      "dislikes": ["shellfish"]
     },
     {
       "id": 27,
@@ -309,17 +243,6 @@
       "dislikes": ["fish", "nuts", "spicy"]
     },
     {
-      "id": 29,
-      "name": "Ground Turkey Breakfast Burrito",
-      "size": "Large",
-      "type": "Breakfast",
-      "carbs": 34,
-      "proteins": 52,
-      "fats": 27,
-      "allergies": ["dairy"],
-      "dislikes": ["dairy", "tomatoes", "turkey"]
-    },
-    {
       "id": 30,
       "name": "Ham & Asperagus Scramble",
       "size": "Large",
@@ -329,17 +252,6 @@
       "fats": 27,
       "allergies": [],
       "dislikes": ["pork"]
-    },
-    {
-      "id": 31,
-      "name": "Shrimp Scramble",
-      "size": "Large",
-      "type": "Breakfast",
-      "carbs": 50,
-      "proteins": 57,
-      "fats": 23,
-      "allergies": ["dairy", "shellfish"],
-      "dislikes": ["tomatoes", "dairy", "shellfish"]
     },
     {
       "id": 32,
@@ -375,17 +287,6 @@
       "dislikes": ["tomatoes", "turkey"]
     },
     {
-      "id": 35,
-      "name": "Ground Turkey Breakfast Burrito",
-      "size": "Small",
-      "type": "Breakfast",
-      "carbs": 23,
-      "proteins": 34,
-      "fats": 18,
-      "allergies": ["dairy"],
-      "dislikes": ["dairy", "tomatoes", "turkey"]
-    },
-    {
       "id": 36,
       "name": "Ham & Asperagus Scramble",
       "size": "Small",
@@ -395,17 +296,6 @@
       "fats": 18,
       "allergies": [],
       "dislikes": ["pork"]
-    },
-    {
-      "id": 37,
-      "name": "Shrimp Scramble",
-      "size": "Small",
-      "type": "Breakfast",
-      "carbs": 33,
-      "proteins": 38,
-      "fats": 17,
-      "allergies": ["dairy", "shellfish"],
-      "dislikes": ["tomatoes", "dairy", "shellfish"]
     },
     {
       "id": 38,
@@ -439,7 +329,195 @@
       "fats": 7,
       "allergies": [],
       "dislikes": ["tomatoes", "turkey"]
+    },
+    {
+      "id": 41,
+      "name": "Cajun Chicken Apple Sausage",
+      "size": "Small",
+      "type": "Entree",
+      "carbs": 16,
+      "proteins": 21,
+      "fats": 16,
+      "allergies": [],
+      "dislikes": ["chicken"]
+    },
+    {
+      "id": 42,
+      "name": "Cajun Chicken Apple Sausage",
+      "size": "Large",
+      "type": "Entree",
+      "carbs": 24,
+      "proteins": 32,
+      "fats": 24,
+      "allergies": [],
+      "dislikes": ["chicken"]
+    },
+    {
+      "id": 43,
+      "name": "Chicken Bento Bowl",
+      "size": "Small",
+      "type": "Entree",
+      "carbs": 28,
+      "proteins": 39,
+      "fats": 14,
+      "allergies": ["nuts", "soy", "sesame"],
+      "dislikes": ["chicken", "nuts", "soy", "sesame"]
+    },
+    {
+      "id": 44,
+      "name": "Chicken Bento Bowl",
+      "size": "Large",
+      "type": "Entree",
+      "carbs": 42,
+      "proteins": 59,
+      "fats": 20,
+      "allergies": ["nuts", "soy", "sesame"],
+      "dislikes": ["chicken", "nuts", "soy", "sesame"]
+    },
+    {
+      "id": 45,
+      "name": "Chicken Spring Roll Bowl",
+      "size": "Small",
+      "type": "Entree",
+      "carbs": 25,
+      "proteins": 36,
+      "fats": 16,
+      "allergies": ["soy"],
+      "dislikes": ["chicken", "soy"]
+    },
+    {
+      "id": 46,
+      "name": "Chicken Spring Roll Bowl",
+      "size": "Large",
+      "type": "Entree",
+      "carbs": 38,
+      "proteins": 53,
+      "fats": 24,
+      "allergies": ["soy"],
+      "dislikes": ["chicken", "soy"]
+    },
+    {
+      "id": 47,
+      "name": "Corned Beef Hash",
+      "size": "Small",
+      "type": "Breakfast",
+      "carbs": 13,
+      "proteins": 41,
+      "fats": 19,
+      "allergies": [],
+      "dislikes": ["beef"]
+    },
+    {
+      "id": 48,
+      "name": "Corned Beef Hash",
+      "size": "Large",
+      "type": "Breakfast",
+      "carbs": 20,
+      "proteins": 61,
+      "fats": 29,
+      "allergies": [],
+      "dislikes": ["beef"]
+    },
+    {
+      "id": 49,
+      "name": "Flat Iron Steak Stir Fry",
+      "size": "Small",
+      "type": "Entree",
+      "carbs": 22,
+      "proteins": 28,
+      "fats": 18,
+      "allergies": ["soy"],
+      "dislikes": ["beef", "soy"]
+    },
+    {
+      "id": 50,
+      "name": "Flat Iron Steak Stir Fry",
+      "size": "Large",
+      "type": "Entree",
+      "carbs": 33,
+      "proteins": 42,
+      "fats": 27,
+      "allergies": ["soy"],
+      "dislikes": ["beef", "soy"]
+    },
+    {
+      "id": 51,
+      "name": "Sausage and Eggs",
+      "size": "Small",
+      "type": "Breakfast",
+      "carbs": 23,
+      "proteins": 36,
+      "fats": 11,
+      "allergies": [],
+      "dislikes": ["chicken"]
+    },
+    {
+      "id": 52,
+      "name": "Sausage and Eggs",
+      "size": "Large",
+      "type": "Breakfast",
+      "carbs": 35,
+      "proteins": 57,
+      "fats": 17,
+      "allergies": [],
+      "dislikes": ["chicken"]
+    },
+    {
+      "id": 53,
+      "name": "Sweet Chili Salmon",
+      "size": "Small",
+      "type": "Entree",
+      "carbs": 29,
+      "proteins": 25,
+      "fats": 13,
+      "allergies": ["fish"],
+      "dislikes": ["fish"]
+    },
+    {
+      "id": 55,
+      "name": "Sweet Chili Salmon",
+      "size": "Large",
+      "type": "Entree",
+      "carbs": 44,
+      "proteins": 37,
+      "fats": 19,
+      "allergies": ["fish"],
+      "dislikes": ["fish"]
+    },
+    {
+      "id": 56,
+      "name": "Turkey Wrap",
+      "size": "Small",
+      "type": "Snack",
+      "carbs": 10,
+      "proteins": 30,
+      "fats": 24,
+      "allergies": ["dairy"],
+      "dislikes": ["dairy", "turkey"]
+    },
+    {
+      "id": 57,
+      "name": "Italian Snack",
+      "size": "Small",
+      "type": "Snack",
+      "carbs": 23,
+      "proteins": 17,
+      "fats": 19,
+      "allergies": ["dairy", "wheat"],
+      "dislikes": ["dairy", "pork"]
+    },
+    {
+      "id": 58,
+      "name": "Mediterranean Snack",
+      "size": "Small",
+      "type": "Snack",
+      "carbs": 28,
+      "proteins": 7,
+      "fats": 11,
+      "allergies": ["sesame", "wheat"],
+      "dislikes": []
     }
+
 
   ]
 }
