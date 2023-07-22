@@ -516,6 +516,116 @@
       "fats": 11,
       "allergies": ["sesame", "wheat"],
       "dislikes": []
+    },
+    {
+      "id": 59,
+      "name": "Carne Asada Tacos",
+      "size": "Small",
+      "type": "Entree",
+      "carbs": 21,
+      "proteins": 28,
+      "fats": 12,
+      "allergies": [],
+      "dislikes": ["beef", "tomatoes"]
+    },
+    {
+      "id": 60,
+      "name": "Carne Asada Tacos",
+      "size": "Large",
+      "type": "Entree",
+      "carbs": 31,
+      "proteins": 42,
+      "fats": 19,
+      "allergies": [],
+      "dislikes": ["beef", "tomatoes"]
+    },
+    {
+      "id": 61,
+      "name": "Chicken Enchiladas",
+      "size": "Small",
+      "type": "Entree",
+      "carbs": 43,
+      "proteins": 47,
+      "fats": 19,
+      "allergies": ["dairy"],
+      "dislikes": ["dairy", "chicken"]
+    },
+    {
+      "id": 62,
+      "name": "Chicken Enchiladas",
+      "size": "Large",
+      "type": "Entree",
+      "carbs": 61,
+      "proteins": 69,
+      "fats": 29,
+      "allergies": [],
+      "dislikes": ["dairy", "chicken"]
+    },
+    {
+      "id": 63,
+      "name": "Chicken Tacos",
+      "size": "Small",
+      "type": "Entree",
+      "carbs": 22,
+      "proteins": 34,
+      "fats": 10,
+      "allergies": [],
+      "dislikes": ["chicken", "tomatoes"]
+    },
+    {
+      "id": 64,
+      "name": "Chicken Tacos",
+      "size": "Large",
+      "type": "Entree",
+      "carbs": 32,
+      "proteins": 50,
+      "fats": 15,
+      "allergies": [],
+      "dislikes": ["chicken", "tomatoes"]
+    },
+    {
+      "id": 65,
+      "name": "Chicken Zucchini Lasagna",
+      "size": "Small",
+      "type": "Entree",
+      "carbs": 16,
+      "proteins": 44,
+      "fats": 22,
+      "allergies": ["dairy"],
+      "dislikes": ["dairy", "chicken", "tomatoes"]
+    },
+    {
+      "id": 66,
+      "name": "Chicken Zucchini Lasagna",
+      "size": "Large",
+      "type": "Entree",
+      "carbs": 24,
+      "proteins": 66,
+      "fats": 33,
+      "allergies": ["dairy"],
+      "dislikes": ["dairy", "chicken", "tomatoes"]
+    },
+    {
+      "id": 67,
+      "name": "Grilled Chicken Bowl",
+      "size": "Small",
+      "type": "Entree",
+      "carbs": 34,
+      "proteins": 34,
+      "fats": 8,
+      "allergies": ["soy"],
+      "dislikes": ["chicken", "tomatoes"]
+    },
+    {
+      "id": 68,
+      "name": "Grilled Chicken Bowl",
+      "size": "Large",
+      "type": "Entree",
+      "carbs": 52,
+      "proteins": 51,
+      "fats": 13,
+      "allergies": ["soy"],
+      "dislikes": ["chicken", "tomatoes"]
     }
 
 
