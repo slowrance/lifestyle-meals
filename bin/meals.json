@@ -265,17 +265,6 @@
       "dislikes": ["spicy", "turkey"]
     },
     {
-      "id": 33,
-      "name": "Turkey Bacon Scramble",
-      "size": "Large",
-      "type": "Breakfast",
-      "carbs": 42,
-      "proteins": 65,
-      "fats": 53,
-      "allergies": ["dairy"],
-      "dislikes": ["dairy", "spicy", "turkey"]
-    },
-    {
       "id": 34,
       "name": "Turkey Scramble",
       "size": "Large",
@@ -307,17 +296,6 @@
       "fats": 10,
       "allergies": [],
       "dislikes": ["spicy", "turkey"]
-    },
-    {
-      "id": 39,
-      "name": "Turkey Bacon Scramble",
-      "size": "Small",
-      "type": "Breakfast",
-      "carbs": 29,
-      "proteins": 44,
-      "fats": 36,
-      "allergies": ["dairy"],
-      "dislikes": ["dairy", "spicy", "turkey"]
     },
     {
       "id": 40,
@@ -395,28 +373,6 @@
       "fats": 24,
       "allergies": ["soy"],
       "dislikes": ["chicken", "soy"]
-    },
-    {
-      "id": 47,
-      "name": "Corned Beef Hash",
-      "size": "Small",
-      "type": "Breakfast",
-      "carbs": 13,
-      "proteins": 41,
-      "fats": 19,
-      "allergies": [],
-      "dislikes": ["beef"]
-    },
-    {
-      "id": 48,
-      "name": "Corned Beef Hash",
-      "size": "Large",
-      "type": "Breakfast",
-      "carbs": 20,
-      "proteins": 61,
-      "fats": 29,
-      "allergies": [],
-      "dislikes": ["beef"]
     },
     {
       "id": 49,
@@ -505,17 +461,6 @@
       "fats": 19,
       "allergies": ["dairy", "wheat"],
       "dislikes": ["dairy", "pork"]
-    },
-    {
-      "id": 58,
-      "name": "Mediterranean Snack",
-      "size": "Small",
-      "type": "Snack",
-      "carbs": 28,
-      "proteins": 7,
-      "fats": 11,
-      "allergies": ["sesame", "wheat"],
-      "dislikes": []
     },
     {
       "id": 59,
