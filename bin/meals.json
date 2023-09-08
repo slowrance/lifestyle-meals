@@ -66,18 +66,7 @@
       "allergies": ["wheat"],
       "dislikes": ["gluten", "turkey"]
     },
-    {
-      "id": 7,
-      "name": "Pork Fried Rice",
-      "size": "Large",
-      "type": "Entree",
-      "carbs": 51,
-      "proteins": 53,
-      "fats": 8,
-      "allergies": [],
-      "dislikes": ["pork"]
-    },
-    {
+        {
       "id": 8,
       "name": "Puttanesca Pasta with Salmon",
       "size": "Large",
@@ -98,17 +87,6 @@
       "fats": 17,
       "allergies": ["dairy", "nuts", "fish", "soy"],
       "dislikes": ["nuts", "fish", "dairy", "spicy"]
-    },
-    {
-      "id": 13,
-      "name": "Soba Noodle Stir Fry",
-      "size": "Large",
-      "type": "Entree",
-      "carbs": 51,
-      "proteins": 52,
-      "fats": 9,
-      "allergies": ["soy", "wheat"],
-      "dislikes": ["gluten", "chicken"]
     },
     {
       "id": 14,
@@ -188,17 +166,6 @@
       "dislikes": ["gluten", "turkey"]
     },
     {
-      "id": 21,
-      "name": "Pork Fried Rice",
-      "size": "Small",
-      "type": "Entree",
-      "carbs": 34,
-      "proteins": 29,
-      "fats": 11,
-      "allergies": [],
-      "dislikes": ["pork"]
-    },
-    {
       "id": 22,
       "name": "Puttanesca Pasta with Salmon",
       "size": "Small",
@@ -219,17 +186,6 @@
       "fats": 12,
       "allergies": ["dairy", "nuts", "fish", "soy"],
       "dislikes": ["nuts", "fish", "dairy", "spicy"]
-    },
-    {
-      "id": 27,
-      "name": "Soba Noodle Stir Fry",
-      "size": "Small",
-      "type": "Entree",
-      "carbs": 34,
-      "proteins": 34,
-      "fats": 6,
-      "allergies": ["soy", "wheat"],
-      "dislikes": ["gluten", "chicken"]
     },
     {
       "id": 28,
@@ -439,28 +395,6 @@
       "fats": 19,
       "allergies": ["fish"],
       "dislikes": ["fish"]
-    },
-    {
-      "id": 56,
-      "name": "Turkey Wrap",
-      "size": "Small",
-      "type": "Snack",
-      "carbs": 10,
-      "proteins": 30,
-      "fats": 24,
-      "allergies": ["dairy"],
-      "dislikes": ["dairy", "turkey"]
-    },
-    {
-      "id": 57,
-      "name": "Italian Snack",
-      "size": "Small",
-      "type": "Snack",
-      "carbs": 23,
-      "proteins": 17,
-      "fats": 19,
-      "allergies": ["dairy", "wheat"],
-      "dislikes": ["dairy", "pork"]
     },
     {
       "id": 59,
