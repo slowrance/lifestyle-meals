@@ -9,7 +9,7 @@
       "proteins": 90,
       "fats": 21,
       "allergies": [],
-      "dislikes": ["spicy", "chicken"]
+      "dislikes": ["spicy", "chicken", "tomatoes"]
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "proteins": 45,
       "fats": 11,
       "allergies": [],
-      "dislikes": ["spicy", "chicken"]
+      "dislikes": ["spicy", "chicken", "tomatoes"]
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "proteins": 101,
       "fats": 26,
       "allergies": [],
-      "dislikes": ["beef"]
+      "dislikes": ["beef", "tomatoes"]
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "proteins": 50,
       "fats": 14,
       "allergies": [],
-      "dislikes": ["beef"]
+      "dislikes": ["beef", "tomatoes"]
     },
     {
       "id": 5,
@@ -53,7 +53,7 @@
       "proteins": 93,
       "fats": 10,
       "allergies": [],
-      "dislikes": ["pork"]
+      "dislikes": ["pork", "spicy"]
     },
     {
       "id": 6,
@@ -64,7 +64,7 @@
       "proteins": 46,
       "fats": 5,
       "allergies": [],
-      "dislikes": ["pork"]
+      "dislikes": ["pork", "spicy"]
     },
     {
       "id": 7,
@@ -97,7 +97,7 @@
       "proteins": 28,
       "fats": 12,
       "allergies": [],
-      "dislikes": ["beef", "tomatoes"]
+      "dislikes": ["beef", "tomatoes", "spicy"]
     },
     {
       "id": 10,
@@ -108,7 +108,7 @@
       "proteins": 42,
       "fats": 19,
       "allergies": [],
-      "dislikes": ["beef", "tomatoes"]
+      "dislikes": ["beef", "tomatoes", "spicy"]
     },
     {
       "id": 11,
@@ -141,7 +141,7 @@
       "proteins": 9,
       "fats": 20,
       "allergies": ["nuts"],
-      "dislikes": ["chicken"]
+      "dislikes": ["chicken", "nuts"]
     },
     {
       "id": 14,
@@ -152,7 +152,7 @@
       "proteins": 26,
       "fats": 19,
       "allergies": ["nuts"],
-      "dislikes": ["chicken"]
+      "dislikes": ["chicken", "nuts"]
     },
     {
       "id": 15,
@@ -185,7 +185,7 @@
       "proteins": 38,
       "fats": 28,
       "allergies": ["nuts", "soy"],
-      "dislikes": ["chicken"]
+      "dislikes": ["chicken", "nuts"]
     },
     {
       "id": 18,
@@ -196,7 +196,7 @@
       "proteins": 26,
       "fats": 19,
       "allergies": ["nuts", "soy"],
-      "dislikes": ["chicken"]
+      "dislikes": ["chicken", "nuts"]
     },
     {
       "id": 19,
@@ -207,7 +207,7 @@
       "proteins": 36,
       "fats": 16,
       "allergies": ["soy"],
-      "dislikes": ["chicken", "soy"]
+      "dislikes": ["chicken", "soy", "spicy"]
     },
     {
       "id": 20,
@@ -218,7 +218,7 @@
       "proteins": 53,
       "fats": 24,
       "allergies": ["soy"],
-      "dislikes": ["chicken", "soy"]
+      "dislikes": ["chicken", "soy", "spicy"]
     },
     {
       "id": 21,
@@ -229,7 +229,7 @@
       "proteins": 34,
       "fats": 10,
       "allergies": [],
-      "dislikes": ["chicken", "tomatoes"]
+      "dislikes": ["chicken", "tomatoes", "spicy"]
     },
     {
       "id": 22,
@@ -240,7 +240,7 @@
       "proteins": 50,
       "fats": 15,
       "allergies": [],
-      "dislikes": ["chicken", "tomatoes"]
+      "dislikes": ["chicken", "tomatoes", "spicy"]
     },
     {
       "id": 23,
@@ -295,7 +295,7 @@
       "proteins": 101,
       "fats": 31,
       "allergies": [],
-      "dislikes": ["beef"]
+      "dislikes": ["beef", "spicy"]
     },
     {
       "id": 28,
@@ -306,7 +306,7 @@
       "proteins": 51,
       "fats": 17,
       "allergies": [],
-      "dislikes": ["beef"]
+      "dislikes": ["beef", "spicy"]
     },
     {
       "id": 29,
@@ -383,7 +383,7 @@
       "proteins": 34,
       "fats": 8,
       "allergies": ["soy"],
-      "dislikes": ["chicken", "tomatoes"]
+      "dislikes": ["chicken", "tomatoes", "spicy", "gluten"]
     },
     {
       "id": 36,
@@ -394,7 +394,7 @@
       "proteins": 51,
       "fats": 13,
       "allergies": ["soy"],
-      "dislikes": ["chicken", "tomatoes"]
+      "dislikes": ["chicken", "tomatoes", "spicy", "gluten"]
     },
     {
       "id": 37,
@@ -449,7 +449,7 @@
       "proteins": 33,
       "fats": 20,
       "allergies": ["nuts", "sesame"],
-      "dislikes": ["turkey"]
+      "dislikes": ["turkey", "nuts", "gluten"]
     },
     {
       "id": 42,
@@ -460,7 +460,7 @@
       "proteins": 22,
       "fats": 13,
       "allergies": ["nuts", "sesame"],
-      "dislikes": ["turkey"]
+      "dislikes": ["turkey", "nuts", "gluten"]
     },
     {
       "id": 43,
@@ -471,7 +471,7 @@
       "proteins": 39,
       "fats": 23,
       "allergies": ["soy"],
-      "dislikes": ["gluten", "turkey"]
+      "dislikes": ["beef"]
     },
     {
       "id": 44,
@@ -482,7 +482,7 @@
       "proteins": 26,
       "fats": 15,
       "allergies": ["soy"],
-      "dislikes": ["gluten", "turkey"]
+      "dislikes": ["beef"]
     },
     {
       "id": 45,
@@ -515,7 +515,7 @@
       "proteins": 44,
       "fats": 20,
       "allergies": ["shellfish"],
-      "dislikes": ["shellfish"]
+      "dislikes": ["shellfish", "tomatoes"]
     },
     {
       "id": 48,
@@ -526,7 +526,7 @@
       "proteins": 30,
       "fats": 14,
       "allergies": ["shellfish"],
-      "dislikes": ["shellfish"]
+      "dislikes": ["shellfish", "tomatoes"]
     },
     {
       "id": 49,
@@ -559,7 +559,7 @@
       "proteins": 28,
       "fats": 8,
       "allergies": ["soy"],
-      "dislikes": ["chicken"]
+      "dislikes": ["chicken", "spicy"]
     },
     {
       "id": 52,
@@ -570,7 +570,7 @@
       "proteins": 25,
       "fats": 5,
       "allergies": ["soy"],
-      "dislikes": ["chicken"]
+      "dislikes": ["chicken", "spicy"]
     },
     {
       "id": 53,
@@ -581,7 +581,7 @@
       "proteins": 39,
       "fats": 21,
       "allergies": ["soy"],
-      "dislikes": ["beef"]
+      "dislikes": ["beef", "spicy"]
     },
     {
       "id": 54,
@@ -592,7 +592,7 @@
       "proteins": 26,
       "fats": 14,
       "allergies": ["soy"],
-      "dislikes": ["beef"]
+      "dislikes": ["beef", "spicy"]
     },
     {
       "id": 55,
@@ -625,7 +625,7 @@
       "proteins": 25,
       "fats": 13,
       "allergies": ["fish"],
-      "dislikes": ["fish"]
+      "dislikes": ["fish", "spicy"]
     },
     {
       "id": 58,
@@ -636,7 +636,7 @@
       "proteins": 37,
       "fats": 19,
       "allergies": ["fish"],
-      "dislikes": ["fish"]
+      "dislikes": ["fish", "spicy"]
     },
     {
       "id": 59,
@@ -691,7 +691,7 @@
       "proteins": 96,
       "fats": 20,
       "allergies": [],
-      "dislikes": ["pork"]
+      "dislikes": ["pork", "tomatoes", "spicy"]
     },
     {
       "id": 64,
@@ -702,7 +702,7 @@
       "proteins": 48,
       "fats": 10,
       "allergies": [],
-      "dislikes": ["pork"]
+      "dislikes": ["pork", "tomatoes", "spicy"]
     }
 
 
