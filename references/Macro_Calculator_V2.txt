@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macro Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        label, select, input {
+            margin-bottom: 10px;
+            display: block;
+            width: 100%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Macro Calculator</h2>
+
+    <label for="weight">Enter your weight in pounds:</label>
+    <input type="number" id="weight" placeholder="Weight in pounds" required>
+
+    <label for="goal">Select your goal:</label>
+    <select id="goal" required>
+        <option value="10">Lose weight with diet only.  No working out.</option>
+        <option value="11">Lose weight working out 1-3 times per week.</option>
+        <option value="12">Gain Muscle and lose body fat with 3-5 workouts per week.</option>
+    </select>
+
+    <button onclick="calculateMacros()">Calculate</button>
+
+    <h3>Total Calories: <span id="totalCalories">0</span></h3>
+
+    <table>
+        <tr>
+            <th>Macro</th>
+            <th>Grams</th>
+        </tr>
+        <tr>
+            <td>Protein</td>
+            <td id="proteinGrams">0</td>
+        </tr>
+        <tr>
+            <td>Carbohydrate</td>
+            <td id="carbGrams">0</td>
+        </tr>
+        <tr>
+            <td>Fat</td>
+            <td id="fatGrams">0</td>
+        </tr>
+    </table>
+
+    <script>
+        function calculateMacros() {
+            // Get user inputs
+            const weightLBS = parseFloat(document.getElementById("weight").value);
+            const goalValue = parseFloat(document.getElementById("goal").value);
+
+            // Calculate Total Calories
+            const totalCalories = weightLBS * goalValue;
+            document.getElementById("totalCalories").innerText = totalCalories;
+
+            // Calculate calories for each macro
+            const proteinCalories = totalCalories * 0.45;
+            const carbCalories = totalCalories * 0.30;
+            const fatCalories = totalCalories * 0.25;
+
+            // Convert calories to grams
+            const proteinGrams = proteinCalories / 4;
+            const carbGrams = carbCalories / 4;
+            const fatGrams = fatCalories / 9;
+
+            // Display results in table
+            document.getElementById("proteinGrams").innerText = proteinGrams.toFixed(2);
+            document.getElementById("carbGrams").innerText = carbGrams.toFixed(2);
+            document.getElementById("fatGrams").innerText = fatGrams.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
