@@ -60,6 +60,14 @@
                                 </select>
                             </div>
 
+                            <div class="include-meats parameter">
+                                <label for="include_meats">Meat Only Options? </label>
+                                <select name="include_meats" id="include_meats">
+                                    <option value="Yes" tal:attributes="selected python: 'selected' if include_meats else None">Yes</option>
+                                    <option value="No" tal:attributes="selected python: 'selected' if not include_meats else None">No</option>
+                                </select>
+                            </div>
+
                             <div class="meal-count parameter">
                                 <label for="meal_count">Meals Per Day: </label>
                                 <select name="meal_count" id="meal_count">
@@ -226,11 +234,11 @@
 <!--?                        <?python meal_num = f'meal{num+1}' ?>-->
 <!--?                        <div class="meal ${meal_num}"><span class="label">${meal_num}: </span>${dm[meal_num].name}</div>-->
 <!--?                    </div>-->
-                    <div class="meal meal1"><span class="label">Meal 1: </span>${dm['meal1'].name}</div>
-                    <div class="meal meal2" tal:condition="exists:dm['meal2']"><span class="label">Meal 2: </span>${dm['meal2'].name}</div>
-                    <div class="meal meal3" tal:condition="exists:dm['meal3']"><span class="label">Meal 3: </span>${dm['meal3'].name}</div>
-                    <div class="meal meal4" tal:condition="exists:dm['meal4']"><span class="label">Meal 4: </span>${dm['meal4'].name}</div>
-                    <div class="meal meal5" tal:condition="exists:dm['meal5']"><span class="label">Meal 5: </span>${dm['meal5'].name}</div>
+                    <div class="meal meal1"><span class="label">Meal 1: </span>${dm['meal1'].name}  <span class="meal-size">(${dm['meal1'].size})</span></div>
+                    <div class="meal meal2" tal:condition="exists:dm['meal2']"><span class="label">Meal 2: </span>${dm['meal2'].name} <span class="meal-size">(${dm['meal2'].size})</span></div>
+                    <div class="meal meal3" tal:condition="exists:dm['meal3']"><span class="label">Meal 3: </span>${dm['meal3'].name} <span class="meal-size">(${dm['meal3'].size})</span></div>
+                    <div class="meal meal4" tal:condition="exists:dm['meal4']"><span class="label">Meal 4: </span>${dm['meal4'].name} <span class="meal-size">(${dm['meal4'].size})</span></div>
+                    <div class="meal meal5" tal:condition="exists:dm['meal5']"><span class="label">Meal 5: </span>${dm['meal5'].name} <span class="meal-size">(${dm['meal5'].size})</span></div>
                     <div class="meal shake-total"><span class="label">Shake Macros: </span>${shake_scoop_count} scoops</div>
                     <div class="meal meal-total"><span class="label">Total: </span></div>
                     <div class="meal meal-remaining"><span class="label">Remaining: </span></div>

@@ -27,6 +27,7 @@ class IndexViewModel(ViewModelBase):
         self.meal_count = 3
         self.meal_size = 'Large'
         self.include_breakfast = True
+        self.include_meats = False
 
     async def load(self):
         form = await self.request.form()
@@ -42,6 +43,7 @@ class IndexViewModel(ViewModelBase):
         self.meal_count = int(form.get('meal_count'))
         self.meal_size = form.get('meal_size')
         self.include_breakfast = True if form.get('include_breakfast') == 'Yes' else False
+        self.include_meats = True if form.get('include_meats') == 'Yes' else False
 
         if not self.target_carbs or self.target_carbs < 0:
             self.error = "Target Carbs must be a number greater than 0."

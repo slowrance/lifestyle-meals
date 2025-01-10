@@ -24,12 +24,15 @@ def get_meals(meal_type: str, meal_size: str) -> List[Meal]:
         meal.calories = meal.carbs * 4 + meal.proteins * 4 + meal.fats * 9
     return meals
 
-def get_combos(meal_size, meal_count, include_breakfast=True):
+def get_combos(meal_size, meal_count, target_proteins, include_breakfast=True, include_meats=False):
     entree_count = meal_count
     if include_breakfast:
         entree_count -= 1
         breakfasts = get_meals('Breakfast', meal_size)
     entrees = get_meals('Entree', meal_size)
+    if target_proteins >= 200 or include_meats:
+        meats = get_meals( 'Meats', 'Small')
+        entrees.extend(meats)
     entrees = list(itertools.combinations_with_replacement(entrees, entree_count))
     combos = list(itertools.product(breakfasts, entrees)) if include_breakfast else entrees
     combos = [flatten2list(combo) for combo in combos]
