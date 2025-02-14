@@ -12,40 +12,22 @@
             </div>
 
 
-            <h2>Macro Calculator</h2>
+            <div class="grid-container calc">
 
-            <label for="weight">Enter your weight in pounds:</label>
-            <input type="number" id="weight" placeholder="Weight in pounds" required>
+                <h2 class="calc-header">Macro Calculator</h2>
 
-            <label for="goal">Select your goal:</label>
-            <select id="goal" required>
-                <option value="10">Lose weight with diet only. No working out.</option>
-                <option value="11">Lose weight working out 1-3 times per week.</option>
-                <option value="12">Gain Muscle and lose body fat with 3-5 workouts per week.</option>
-            </select>
+                        <label for="weight" class="calc-label">Enter your weight in pounds:</label>
+                        <input type="number" id="weight" class=calc-input" placeholder="Weight in pounds" required>
 
-            <button onclick="calculateMacros()">Calculate</button>
+                        <label for="goal" class="calc-label">Select your goal:</label>
+                        <select id="goal" class="calc-input" required>
+                            <option value="7">Lose weight with diet only. No working out.</option>
+                            <option value="8">Lose weight working out 1-3 times per week.</option>
+                            <option value="9">Gain Muscle and lose body fat with 3-5 workouts per week.</option>
+                        </select>
+                    <button class="btn btn-success btn-generate" onclick="calculateMacros()">Calculate</button>
+            </div>
 
-            <h3>Total Calories: <span id="totalCalories">0</span></h3>
-
-            <table>
-                <tr>
-                    <th>Macro</th>
-                    <th>Grams</th>
-                </tr>
-                <tr>
-                    <td>Protein</td>
-                    <td id="proteinGrams">0</td>
-                </tr>
-                <tr>
-                    <td>Carbohydrate</td>
-                    <td id="carbGrams">0</td>
-                </tr>
-                <tr>
-                    <td>Fat</td>
-                    <td id="fatGrams">0</td>
-                </tr>
-            </table>
 
             <script>
                 function calculateMacros() {
@@ -55,7 +37,7 @@
 
                     // Calculate Total Calories
                     const totalCalories = weightLBS * goalValue;
-                    document.getElementById("totalCalories").innerText = totalCalories;
+                    // document.getElementById("totalCalories").innerText = totalCalories;
 
                     // Calculate calories for each macro
                     const proteinCalories = totalCalories * 0.45;
@@ -68,9 +50,9 @@
                     const fatGrams = fatCalories / 9;
 
                     // Display results in table
-                    document.getElementById("proteinGrams").innerText = proteinGrams.toFixed(2);
-                    document.getElementById("carbGrams").innerText = carbGrams.toFixed(2);
-                    document.getElementById("fatGrams").innerText = fatGrams.toFixed(2);
+                    // document.getElementById("proteinGrams").innerText = proteinGrams.toFixed(2);
+                    // document.getElementById("carbGrams").innerText = carbGrams.toFixed(2);
+                    // document.getElementById("fatGrams").innerText = fatGrams.toFixed(2);
                     document.getElementsByName("target_carbs")[0].value = Math.round(carbGrams);
                     document.getElementsByName("target_proteins")[0].value = Math.round(proteinGrams);
                     document.getElementsByName("target_fats")[0].value = Math.round(fatGrams);

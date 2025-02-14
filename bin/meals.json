@@ -138,8 +138,8 @@
       "size": "Large",
       "type": "Entree",
       "carbs": 30,
-      "proteins": 9,
-      "fats": 20,
+      "proteins": 39,
+      "fats": 26,
       "allergies": ["nuts"],
       "dislikes": ["chicken", "nuts"]
     },

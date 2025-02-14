@@ -83,10 +83,28 @@ body {
 
 .targets {
     color: #ebebeb;
-    background: #0073b7;
     padding: 10px 0 50px 0;
 }
 
+
+
+
+.calc-header {
+    color: #3c3c3c;
+    grid-column: 1 / span 6;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.calc-label {
+    grid-column: 1 / span 3;
+    margin-left: 10%;
+}
+.calc-input {
+    grid-column: 4 / span 3;
+    margin-right: 10%;
+}
 
 .target-carbs {
     grid-column: 1 / span 2;
